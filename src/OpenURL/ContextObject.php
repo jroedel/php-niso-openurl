@@ -440,4 +440,11 @@ class ContextObject
         }
         return($kev);
     }
+    
+    public function toCoins()
+    {
+        $kev = $this->toKev();
+        $title = str_replace('&', '&amp;', $kev);
+        return "<span class='Z3988' title='$title'>";
+    }
 }
