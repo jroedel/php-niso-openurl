@@ -3,6 +3,8 @@ namespace OpenURL;
 
 class ContextObject
 {
+    const COINS_SPAN_CLASS = 'Z3988';
+    
     /**
      * @var string
      */
@@ -445,6 +447,7 @@ class ContextObject
     {
         $kev = $this->toKev();
         $title = str_replace('&', '&amp;', $kev);
-        return "<span class='Z3988' title='$title'>";
+        $class = self::COINS_SPAN_CLASS;
+        return "<span class='$class' title='$title'></span>";
     }
 }
